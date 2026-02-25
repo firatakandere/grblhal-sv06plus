@@ -118,6 +118,8 @@
   #include "boards/supergerbil_map.h"
 #elif defined(BOARD_CREALITY_V4_2_2) || defined(BOARD_CREALITY_V4_2_7)
   #include "boards/creality_v4.2.x_map.h"
+#elif defined(BOARD_SOVOL_SV06_PLUS)
+  #include "boards/sovol_sv06_plus_map.h"
 #elif defined(BOARD_MY_MACHINE)
   #include "boards/my_machine_map.h"
 #else // default board
@@ -259,7 +261,7 @@
 #error SD card plugin not supported!
 #endif
 
-#if TRINAMIC_ENABLE && !(defined(BOARD_CNC_BOOSTERPACK) || defined(BOARD_BTT_SKR_MINI_E3_V20) || defined(BOARD_BTT_SKR_MINI_E3_V20_ALT2))
+#if TRINAMIC_ENABLE && !(defined(BOARD_CNC_BOOSTERPACK) || defined(BOARD_BTT_SKR_MINI_E3_V20) || defined(BOARD_BTT_SKR_MINI_E3_V20_ALT2) || defined(BOARD_SOVOL_SV06_PLUS))
 #error Trinamic plugin not supported!
 #endif
 
